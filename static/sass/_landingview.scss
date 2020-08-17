@@ -1,0 +1,89 @@
+.landing__view {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/mountain.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .heading {
+    color: #fff;
+    margin: 10px auto;
+  }
+  .tagline {
+    text-align: center;
+    color: #fff;
+    // font-size: 2rem;
+  }
+  .booknow__btn {
+    // padding: 15px 25px;
+    // font-size: 1.5rem;
+    border-radius: 10px;
+    margin: 0 auto;
+    border: none;
+    &:hover {
+      background-color: darken($color: #fff, $amount: 10%);
+    }
+    &:focus,
+    &:active {
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .landing__view {
+    .heading {
+      font-size: 2.8rem;
+    }
+    .tagline {
+      margin: 0 10px;
+    }
+    .booknow__btn {
+      padding: 15px 35px;
+      margin: 40px auto;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .landing__view {
+    .heading {
+      font-size: 3.5rem;
+    }
+    .tagline {
+      font-size: 1.4rem;
+      margin: 0 30px;
+    }
+    .booknow__btn {
+      padding: 15px 35px;
+      margin: 40px auto;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .landing__view {
+    .heading {
+      font-size: 4rem;
+      margin: 30px auto;
+    }
+    .tagline {
+      font-size: 1.8rem;
+      margin: 0 30px;
+    }
+    .booknow__btn {
+      padding: 15px 35px;
+      margin: 80px auto;
+      font-size: 1.6rem;
+    }
+  }
+}

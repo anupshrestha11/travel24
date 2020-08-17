@@ -1,0 +1,26 @@
+.sidebar {
+  position: fixed;
+  z-index: 95;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  transition: all 0.8s ease-in-out;
+  right: -100%;
+}
+
+.sidebar.show {
+  right: 0;
+}
+
+@media screen and (min-width: 599px) {
+  .sidebar {
+    display: none;
+  }
+  .backdrop {
+    display: none;
+  }
+}

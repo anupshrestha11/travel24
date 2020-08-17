@@ -1,5 +1,9 @@
-@import "./global";
-@import "./header";
-@import "./dropback";
-@import "./sidebar";
-@import "./landingview";
+@import "./components/global";
+@import "./components/header";
+@import "./components/dropback";
+@import "./components/sidebar";
+@import "./components/landingview";
+@import "./components/introsection";
+@import "./components/distsection";
+@import "./components/testimentsection";
+@import "components/footer";

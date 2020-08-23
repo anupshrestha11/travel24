@@ -10,6 +10,13 @@
   background-color: #fff;
   transition: all 0.8s ease-in-out;
   right: -100%;
+  box-shadow: -5px 0 12px rgba(0, 0, 0, 0.2);
+  a {
+    all: unset;
+    cursor: pointer;
+    user-select: none;
+    color: #000;
+  }
 }
 
 .sidebar.show {

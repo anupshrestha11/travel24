@@ -1,12 +1,13 @@
 .dist__section {
-  max-width: 1200px;
-  margin: 20px auto 50px;
+  margin: 20px 0 50px;
 }
 
 .dist {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 
   &__card {
     width: 350px;
@@ -72,8 +73,6 @@
 @media screen and (min-width: 600px) and(max-width: 1200px) {
   .dist {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
 
     &__card {
       width: 240px;

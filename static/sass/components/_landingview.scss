@@ -1,12 +1,13 @@
 .landing__view {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../images/mountain.jpg");
+    url("../images/b1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: grid;
   place-content: center;
+  animation: changeImage 15s infinite 5s ease alternate;
   * {
     margin: 0;
     padding: 0;
@@ -35,6 +36,32 @@
       outline: none;
       border: none;
     }
+  }
+}
+
+@keyframes changeImage {
+  0% {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../images/b1.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+
+  50% {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../images/b2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  100% {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../images/b3.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
   }
 }
 

@@ -305,6 +305,7 @@ body {
   position: fixed;
   z-index: 95;
   top: 0;
+  bottom: 0;
   width: 60vw;
   height: 100vh;
   display: -webkit-box;
@@ -349,14 +350,16 @@ body {
 
 .landing__view {
   height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/mountain.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/mountain.jpg");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   display: -ms-grid;
   display: grid;
   place-content: center;
+  -webkit-animation: changeImage 15s infinite 5s ease alternate;
+          animation: changeImage 15s infinite 5s ease alternate;
 }
 
 .landing__view * {
@@ -388,6 +391,54 @@ body {
 .landing__view .booknow__btn:focus, .landing__view .booknow__btn:active {
   outline: none;
   border: none;
+}
+
+@-webkit-keyframes changeImage {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b1.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b3.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b3.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+  }
+}
+
+@keyframes changeImage {
+  0% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b1.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b1.jpg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+  }
+  50% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b2.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/b3.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/b3.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: cover;
+  }
 }
 
 @media screen and (max-width: 599px) {
@@ -551,11 +602,22 @@ body {
 .dist__card {
   width: 350px;
   min-height: 400px;
-  border-radius: 20px;
+  border-radius: 15px 15px 0 0;
   overflow: hidden;
   -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
   margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.dist__card * {
+  position: relative;
 }
 
 .dist__card .dist__img {
@@ -563,6 +625,14 @@ body {
   height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.dist__card span.rating {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: gold;
+  font-size: 1.3rem;
 }
 
 .dist__card .dist__content {
@@ -586,9 +656,36 @@ body {
   margin-bottom: auto;
 }
 
+.dist__card .dist__content .dist__name a {
+  text-decoration: none;
+  color: #000;
+}
+
 .dist__card .dist__content .dist__name strong {
   font-weight: 800;
   font-size: 1.2rem;
+}
+
+.dist__card .dist__content .dist__detail {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.dist__card .dist__content .dist__detail p {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.dist__card .dist__content .dist__detail p span.price {
+  font-weight: bold;
+  color: #25ccf7;
+  font-size: 1.3rem;
 }
 
 .dist__card .dist__content .dist__text {
@@ -609,6 +706,22 @@ body {
 .dist__card .dist__content .dist__btn:hover {
   background-color: #000;
   color: #ffffff;
+}
+
+.dist__card .dist__booknow {
+  text-decoration: none;
+  background: #0abde3;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin: 0;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+  margin-top: auto;
+}
+
+.dist__card .dist__booknow:hover {
+  background-color: #0894b2;
 }
 
 @media screen and (max-width: 599px) {

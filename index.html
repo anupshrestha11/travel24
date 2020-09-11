@@ -5,14 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel 24</title>
 
-    <!-- !normalize css -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-    />
-
     <!-- ! bootstrap -->
     <link
       rel="stylesheet"
@@ -24,6 +16,11 @@
     <!-- ! font Nunito -->
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ! material icons -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
 
@@ -74,29 +71,25 @@
 
     <div class="sidebar" id="sidebar">
       <ul class="nav__items">
-        <li class="nav__link">
-          <div
-            class="dropdown-toggle"
-            id="dropdownMenu2"
-            data-toggle="dropdown"
-            aria-haspopup="false"
-            aria-expanded="true"
-          >
-            Destination
-          </div>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <a href="packages.html" class="dropdown-item" type="button">
-              Nepal
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="packages.html" class="dropdown-item" type="button">
-              Bhutan
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="packages.html" class="dropdown-item" type="button">
-              Tibet
-            </a>
-          </div>
+        <li class="nav__link flex-column">
+          <a
+            href="/"
+            class="nav-link collapsed d-flex justify-content-between align-items-center"
+            data-toggle="collapse"
+            data-target="#destinations"
+            >Destinations <i class="fas fa-chevron-down rotate"></i
+          ></a>
+          <ul id="destinations" class="collapse p-0">
+            <li class="nav-item list-unstyled">
+              <a href="#" class="nav-link">Nepal</a>
+            </li>
+            <li class="nav-item list-unstyled">
+              <a href="#" class="nav-link">Nepal</a>
+            </li>
+            <li class="nav-item list-unstyled">
+              <a href="#" class="nav-link">Nepal</a>
+            </li>
+          </ul>
         </li>
         <li class="nav__link"><a href="#">About us</a></li>
         <li class="nav__link"><a href="contact.html">Contact us</a></li>
@@ -193,40 +186,109 @@
       </div>
       <div class="dist">
         <div class="dist__card">
-          <img src="./static/images/abc.jpg" alt="" class="dist__img" />
+          <a href="destination.html"
+            ><img src="./static/images/abc.jpg" alt="" class="dist__img" />
+            <span class="material-icons rating"
+              >star star star star star_half</span
+            >
+          </a>
           <div class="dist__content">
             <div class="dist__name">
-              <strong> Annapurna Base Camp</strong>
+              <a href="destination.html"
+                ><strong> Annapurna Base Camp</strong></a
+              >
             </div>
-            <div class="dist__text">
-              adipisicing elit. Beatae, eligendi. Debitis odit distinctio nobis
+            <div class="dist__detail">
+              <p><strong>Duration: </strong> 1week</p>
+              <p><strong>Difficulty: </strong> Hard</p>
+              <p><strong>Price: </strong><span class="price"> $ 330</span></p>
             </div>
-            <a href="#" class="dist__btn">Read More</a>
           </div>
+          <a href="#" class="dist__booknow">Book now</a>
         </div>
         <div class="dist__card">
-          <img src="./static/images/abc.jpg" alt="" class="dist__img" />
+          <a href="destination.html"
+            ><img src="./static/images/abc.jpg" alt="" class="dist__img" />
+            <span class="material-icons rating"
+              >star star star star star_half</span
+            >
+          </a>
           <div class="dist__content">
             <div class="dist__name">
-              <strong> Annapurna Base Camp</strong>
+              <a href="destination.html"
+                ><strong> Annapurna Base Camp</strong></a
+              >
             </div>
-            <div class="dist__text">
-              adipisicing elit. Beatae, eligendi. Debitis odit distinctio nobis
+            <div class="dist__detail">
+              <p><strong>Duration: </strong> 1week</p>
+              <p><strong>Difficulty: </strong> Hard</p>
+              <p><strong>Price: </strong><span class="price"> $ 330</span></p>
             </div>
-            <a href="#" class="dist__btn">Read More</a>
           </div>
+          <a href="#" class="dist__booknow">Book now</a>
         </div>
         <div class="dist__card">
-          <img src="./static/images/abc.jpg" alt="" class="dist__img" />
+          <a href="destination.html"
+            ><img src="./static/images/abc.jpg" alt="" class="dist__img" />
+            <span class="material-icons rating"
+              >star star star star star_half</span
+            >
+          </a>
           <div class="dist__content">
             <div class="dist__name">
-              <strong> Annapurna Base Camp</strong>
+              <a href="destination.html"
+                ><strong> Annapurna Base Camp</strong></a
+              >
             </div>
-            <div class="dist__text">
-              adipisicing elit. Beatae, eligendi. Debitis odit distinctio nobis
+            <div class="dist__detail">
+              <p><strong>Duration: </strong> 1week</p>
+              <p><strong>Difficulty: </strong> Hard</p>
+              <p><strong>Price: </strong><span class="price"> $ 330</span></p>
             </div>
-            <a href="#" class="dist__btn">Read More</a>
           </div>
+          <a href="#" class="dist__booknow">Book now</a>
+        </div>
+        <div class="dist__card">
+          <a href="destination.html"
+            ><img src="./static/images/abc.jpg" alt="" class="dist__img" />
+            <span class="material-icons rating"
+              >star star star star star_half</span
+            >
+          </a>
+          <div class="dist__content">
+            <div class="dist__name">
+              <a href="destination.html"
+                ><strong> Annapurna Base Camp</strong></a
+              >
+            </div>
+            <div class="dist__detail">
+              <p><strong>Duration: </strong> 1week</p>
+              <p><strong>Difficulty: </strong> Hard</p>
+              <p><strong>Price: </strong><span class="price"> $ 330</span></p>
+            </div>
+          </div>
+          <a href="#" class="dist__booknow">Book now</a>
+        </div>
+        <div class="dist__card">
+          <a href="destination.html"
+            ><img src="./static/images/abc.jpg" alt="" class="dist__img" />
+            <span class="material-icons rating"
+              >star star star star star_half</span
+            >
+          </a>
+          <div class="dist__content">
+            <div class="dist__name">
+              <a href="destination.html"
+                ><strong> Annapurna Base Camp</strong></a
+              >
+            </div>
+            <div class="dist__detail">
+              <p><strong>Duration: </strong> 1week</p>
+              <p><strong>Difficulty: </strong> Hard</p>
+              <p><strong>Price: </strong><span class="price"> $ 330</span></p>
+            </div>
+          </div>
+          <a href="#" class="dist__booknow">Book now</a>
         </div>
       </div>
     </section>
